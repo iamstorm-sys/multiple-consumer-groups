@@ -40,6 +40,7 @@ With this node app, you can create multiple consumer-groups for a Redpanda-clust
     ./ignite.sh 3 group
 
     # the first argument (3) represents the number of consumer-group instances for a topic, we want to be live
+    # With less number of consumer-groups, cleanup will become easy. Recommended (5)
     # the second argument (group) represents the prefix, which the script use to create multiple consumers-groups
     ```
 2. To check the outputs, you can visit 'output.log'
@@ -48,5 +49,6 @@ With this node app, you can create multiple consumer-groups for a Redpanda-clust
 1. make sure your cluster is live, else the script will result into an error
     If there is any unusual behaviour, you can check the 'yarn-error.log' file
 
-
+# Clean-up
+Close the terminals via ctrl + c, after finish working with consumer-groups, 
 
