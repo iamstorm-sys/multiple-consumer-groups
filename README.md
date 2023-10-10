@@ -13,7 +13,7 @@ With this node app, you can create multiple consumer-groups for a Redpanda-clust
     chmod +x index.js
     chmod +x ignite.js
     ```
-4. Replace the metadata.broker.list value
+4. Replace the metadata.broker.list value, in index.js
     ```
     const consumer = new KafkaConsumer({
         'group.id': groupID,
@@ -21,7 +21,7 @@ With this node app, you can create multiple consumer-groups for a Redpanda-clust
         'enable.auto.commit': false, // Set to true to enable auto-commit if needed
     });
     ```
-5. Replace the topic 'beautiful-tuesday' with your topic name
+5. Replace the topic 'beautiful-tuesday' with your topic name, in index.js
     ```
     consumer.on('ready', () => {
         consumer.subscribe(['beautiful-tuesday']); 
